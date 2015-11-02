@@ -1,6 +1,5 @@
 package domain;
 
-import java.sql.Date;
 
 public class Car {
 
@@ -8,7 +7,7 @@ public class Car {
 	private String Marka;
 	private String Model;
 	private String Kolor;
-	private Date Rok_produkcji;
+	private int Rok_produkcji;
 	private String Opis;
 	
 	public Car() {
@@ -17,7 +16,7 @@ public class Car {
 	public Car(String Marka, 
 			String Model,
 			String Kolor, 
-			Date Rok_produkcji,
+			int Rok_produkcji,
 			String Opis) {
 		super();
 		this.Marka = Marka;
@@ -59,11 +58,11 @@ public class Car {
 		Kolor = kolor;
 	}
 
-	public Date getRok_produkcji() {
+	public int getRok_produkcji() {
 		return Rok_produkcji;
 	}
 
-	public void setRok_produkcji(Date rok_produkcji) {
+	public void setRok_produkcji(int rok_produkcji) {
 		Rok_produkcji = rok_produkcji;
 	}
 
