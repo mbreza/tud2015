@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0" errors="0" skipped="0" tests="0" name="service.RentManagerTest">
+<testsuite failures="0" time="0.098" errors="0" skipped="0" tests="10" name="service.RentManagerTest">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/opt/devel/jdk1.7.0_40/jre/lib/i386"/>
@@ -59,4 +59,14 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
+  <testcase time="0.003" classname="service.RentManagerTest" name="checkClearingRent"/>
+  <testcase time="0.014" classname="service.RentManagerTest" name="checkDeletingRentById_p"/>
+  <testcase time="0.013" classname="service.RentManagerTest" name="checkAdding"/>
+  <testcase time="0.008" classname="service.RentManagerTest" name="checkDeletingId_w"/>
+  <testcase time="0.01" classname="service.RentManagerTest" name="checkUpdatingOrder"/>
+  <testcase time="0.02" classname="service.RentManagerTest" name="checkGettingRentByIDw"/>
+  <testcase time="0.009" classname="service.RentManagerTest" name="checkGettingRentByIDs"/>
+  <testcase time="0.014" classname="service.RentManagerTest" name="checkGettingRentByIDp"/>
+  <testcase time="0.007" classname="service.RentManagerTest" name="checkDeletingRentById_s"/>
+  <testcase time="0" classname="service.RentManagerTest" name="checkConnection"/>
 </testsuite>

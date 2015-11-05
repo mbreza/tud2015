@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0.057" errors="0" skipped="0" tests="5" name="service.EmpManagerTest">
+<testsuite failures="0" time="0.054" errors="0" skipped="0" tests="6" name="service.EmpManagerTest">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/opt/devel/jdk1.7.0_40/jre/lib/i386"/>
@@ -59,9 +59,10 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase time="0.02" classname="service.EmpManagerTest" name="checkAdding"/>
-  <testcase time="0.002" classname="service.EmpManagerTest" name="checkConnection"/>
-  <testcase time="0.002" classname="service.EmpManagerTest" name="checkClearingSamochod"/>
-  <testcase time="0.004" classname="service.EmpManagerTest" name="checkDeleting"/>
-  <testcase time="0.029" classname="service.EmpManagerTest" name="checkUpdatingSamochod"/>
+  <testcase time="0.021" classname="service.EmpManagerTest" name="checkClearingEmp"/>
+  <testcase time="0.01" classname="service.EmpManagerTest" name="checkDeleting"/>
+  <testcase time="0.016" classname="service.EmpManagerTest" name="checkUpdatingEmp"/>
+  <testcase time="0.004" classname="service.EmpManagerTest" name="checkGettingEmp"/>
+  <testcase time="0.002" classname="service.EmpManagerTest" name="checkAdding"/>
+  <testcase time="0.001" classname="service.EmpManagerTest" name="checkConnection"/>
 </testsuite>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0.027" errors="0" skipped="0" tests="4" name="service.CarManagerTest">
+<testsuite failures="0" time="0.022" errors="0" skipped="0" tests="6" name="service.CarManagerTest">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/opt/devel/jdk1.7.0_40/jre/lib/i386"/>
@@ -59,8 +59,10 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase time="0.004" classname="service.CarManagerTest" name="checkAdding"/>
-  <testcase time="0.005" classname="service.CarManagerTest" name="checkClearingSamochod"/>
-  <testcase time="0.005" classname="service.CarManagerTest" name="checkDeleting"/>
-  <testcase time="0.013" classname="service.CarManagerTest" name="checkUpdatingSamochod"/>
+  <testcase time="0.002" classname="service.CarManagerTest" name="checkDeleting"/>
+  <testcase time="0.003" classname="service.CarManagerTest" name="checkClearingSamochod"/>
+  <testcase time="0.01" classname="service.CarManagerTest" name="checkUpdatingSamochod"/>
+  <testcase time="0.003" classname="service.CarManagerTest" name="checkAdding"/>
+  <testcase time="0.001" classname="service.CarManagerTest" name="checkConnection"/>
+  <testcase time="0.003" classname="service.CarManagerTest" name="checkGettingSamochod"/>
 </testsuite>

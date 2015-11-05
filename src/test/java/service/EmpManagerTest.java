@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.junit.Test;
 
+
 import domain.Emp;
 
 public class EmpManagerTest {
@@ -30,7 +31,7 @@ public class EmpManagerTest {
 		
 		Emp emp = new Emp(IMIE_1, NAZWISKO_1, STANOWISKO_1, PESEL_1, PENSJA_1);
 		
-		empManager.clearSamochod();
+		empManager.clearEmp();
 		assertEquals(1,empManager.addEmp(emp));
 		
 		List<Emp> emps = empManager.getAllEmp();
@@ -45,9 +46,9 @@ public class EmpManagerTest {
 	}
 	
     @Test
-    public void checkClearingSamochod()
+    public void checkClearingEmp()
     {
-        empManager.clearSamochod();
+        empManager.clearEmp();
         assertEquals(empManager.getAllEmp().size(), 0);
     }
 	
@@ -60,9 +61,9 @@ public class EmpManagerTest {
     }
     
     @Test
-    public void checkUpdatingSamochod()
+    public void checkUpdatingEmp()
     {
-        empManager.clearSamochod();
+        empManager.clearEmp();
 
         empManager.addEmp(new Emp("Johnny", "Bravo", "852852852", 2222,11));
         emp = empManager.getAllEmp().get(0);
@@ -80,5 +81,25 @@ public class EmpManagerTest {
         assertEquals(empManager.getAllEmp().get(0).getStanowisko(), "222333444");
         assertEquals(empManager.getAllEmp().get(0).getPesel(), 4312);
         assertEquals(empManager.getAllEmp().get(0).getPensja(), 2);
+    }
+    
+    @Test
+    public void checkGettingEmp()
+    {
+        empManager.clearEmp();
+
+        Emp empRetrieved = null;
+
+        empManager.addEmp(new Emp("a", "b", "c", 1, 2));
+        emp = empManager.getAllEmp().get(0);
+        empRetrieved = empManager.getEmp(emp);
+        
+        assertEquals(emp.getId_pracownik(), empRetrieved.getId_pracownik());
+        assertEquals(emp.getImie(), empRetrieved.getImie());
+        assertEquals(emp.getNazwisko(), empRetrieved.getNazwisko());
+        assertEquals(emp.getStanowisko(), empRetrieved.getStanowisko());
+        assertEquals(emp.getPesel(), empRetrieved.getPesel());
+        assertEquals(emp.getPensja(), empRetrieved.getPensja());
+    
     }
 }

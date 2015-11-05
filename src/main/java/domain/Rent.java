@@ -1,13 +1,12 @@
 package domain;
 
-import java.util.Date;
 
 public class Rent {
 
 	private int id_wypozyczenie;
-	private int id_samochod;
-	private int id_pracownik;
-	private Date data_wypozyczenia;
+	private int idreff_samochod;
+	private int idreff_pracownik;
+	private String data_wypozyczenia;
 	private int ilosc_dni;
 	private int oplata;
 
@@ -15,16 +14,15 @@ public class Rent {
 	public Rent() {
 	}
 	
-	public Rent(int id_wypozyczenie,
+	public Rent(
 	 int id_samochod,
 	int id_pracownik,
-	Date data_wypozyczenia,
+	String data_wypozyczenia,
 	int ilosc_dni,
 	int oplata) {
 		super();
-		this.id_wypozyczenie = id_wypozyczenie;
-		this.id_samochod = id_samochod;
-		this.id_pracownik = id_pracownik;
+		this.idreff_samochod = id_samochod;
+		this.idreff_pracownik = id_pracownik;
 		this.data_wypozyczenia = data_wypozyczenia;
 		this.ilosc_dni = ilosc_dni;
 		this.oplata = oplata;
@@ -38,27 +36,29 @@ public class Rent {
 		this.id_wypozyczenie = id_wypozyczenie;
 	}
 
-	public int getId_samochod() {
-		return id_samochod;
+	
+
+	public int getIdreff_samochod() {
+		return idreff_samochod;
 	}
 
-	public void setId_samochod(int id_samochod) {
-		this.id_samochod = id_samochod;
+	public void setIdreff_samochod(int idreff_samochod) {
+		this.idreff_samochod = idreff_samochod;
 	}
 
-	public int getId_pracownik() {
-		return id_pracownik;
+	public int getIdreff_pracownik() {
+		return idreff_pracownik;
 	}
 
-	public void setId_pracownik(int id_pracownik) {
-		this.id_pracownik = id_pracownik;
+	public void setIdreff_pracownik(int idreff_pracownik) {
+		this.idreff_pracownik = idreff_pracownik;
 	}
 
-	public Date getData_wypozyczenia() {
+	public String getData_wypozyczenia() {
 		return data_wypozyczenia;
 	}
 
-	public void setData_wypozyczenia(Date data_wypozyczenia) {
+	public void setData_wypozyczenia(String data_wypozyczenia) {
 		this.data_wypozyczenia = data_wypozyczenia;
 	}
 

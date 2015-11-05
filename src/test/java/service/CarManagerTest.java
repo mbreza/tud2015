@@ -29,7 +29,6 @@ public class CarManagerTest {
 		assertNotNull(carManager.getConnection());
 	}
 	
-	
 	@Test
 	public void checkAdding(){
 		
@@ -86,6 +85,26 @@ public class CarManagerTest {
         assertEquals(carManager.getAllSamochod().get(0).getKolor(), "222333444");
         assertEquals(carManager.getAllSamochod().get(0).getRok_produkcji(), 4312);
         assertEquals(carManager.getAllSamochod().get(0).getOpis(), "Opis");
+    }
+   
+    @Test
+    public void checkGettingSamochod()
+    {
+        carManager.clearSamochod();
+
+        Car carRetrieved = null;
+
+        carManager.addSamochod(new Car("a", "b", "c", 1,"d"));
+        car = carManager.getAllSamochod().get(0);
+        carRetrieved = carManager.getSamochod(car);
+
+        assertEquals(car.getId_samochod(), carRetrieved.getId_samochod());
+        assertEquals(car.getModel(), carRetrieved.getModel());
+        assertEquals(car.getMarka(), carRetrieved.getMarka());
+        assertEquals(car.getKolor(), carRetrieved.getKolor());
+        assertEquals(car.getRok_produkcji(), carRetrieved.getRok_produkcji());
+        assertEquals(car.getOpis(), carRetrieved.getOpis());
+    
     }
     
 }
