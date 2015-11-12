@@ -48,13 +48,13 @@ public class RentManagerTest {
         Emp emp = new Emp("a", "aa", "aa", 3,2);
         empManager.addEmp(emp);
 
-        Rent rent = new Rent(carManager.getAllSamochod().get(0).getId_samochod(), empManager.getAllEmp().get(0).getId_pracownik(), "a", 1, 2);
+        Rent rent = new Rent(carManager.getAllSamochod().get(0).getId_samochod(), empManager.getAllEmp().get(0).getId_pracownik(), "abc", 1, 2);
 
         rentManager.addRent(rent);
 
         assertEquals(carManager.getAllSamochod().get(0).getId_samochod(), rent.getIdreff_samochod());
         assertEquals(empManager.getAllEmp().get(0).getId_pracownik(), rent.getIdreff_pracownik());
-        assertEquals("a", rent.getData_wypozyczenia());
+        assertEquals("abc", rent.getData_wypozyczenia());
         assertEquals(1, rent.getIlosc_dni());
         assertEquals(2, rent.getOplata());
     }
@@ -102,10 +102,10 @@ public class RentManagerTest {
         rentManager.addRent(rent);
 
         Rent r = rentManager.getAllRent().get(0);
-        r.setOplata(99);
+        r.setOplata(567);
         rentManager.updateRent(r);
 
-        assertEquals(rentManager.getAllRent().get(0).getOplata(), 99);
+        assertEquals(rentManager.getAllRent().get(0).getOplata(), 567);
     }
     
     @Test
